@@ -1,0 +1,49 @@
+{
+    "coinbasepro": {
+        "api_url": "https://api.pro.coinbase.com",
+        "api_key_file": "coinbasepro.key",
+        "config": {
+            "base_currency": "BTC",
+            "quote_currency": "USD",
+            "live": 1,
+            "sellatloss": 0,
+            "sellatresistance": 1,
+            "nobuynearhighpcnt": 4.3,
+            "trailingstoploss": -4.800000000000001,
+            "trailingstoplosstrigger": 3.1,
+            "nosellmaxpcnt": 1.1,
+            "nosellminpcnt": -2.1,
+            "disablebullonly": 1,
+            "disablebuynearhigh": 0,
+            "disablebuyema": 1,
+            "disablebuymacd": 0,
+            "disablebuyobv": 0,
+            "disablebuyelderray": 1,
+            "disablefailsafefibonaccilow": 0,
+            "disableprofitbankreversal": 1,
+            "disabletracker": 0,
+            "disabletelegram": 0,
+            "autorestart": 0,
+            "graphs": 1,
+            "verbose": 0,
+            "stats": 0,
+            "enableinsufficientfundslogging": 1,
+            "websocket": 1
+        }
+    },
+    "telegram": {
+        "token": "",
+        "client_id": ""
+    },
+    "logger": {
+        "filelog": 1,
+        "logfile": "pycryptobot.log",
+        "fileloglevel": "INFO",
+        "consolelog": 1,
+        "consoleloglevel": "INFO"
+    },
+    "test_info": {
+        "margin": 1,
+        "date": "2021-10-2"
+    }
+}
