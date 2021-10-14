@@ -29,7 +29,8 @@ if("--market" in  sys.argv):
 else:
     market = 'DOGE-USD' # default market can be whatever you choose
 
-telegram = '1' # Disable telegram by default to keep from lots of useless alerts
+testing_telegram = 1 # Disable telegram by default to keep from lots of useless alerts during testing
+live_telegram = 0 # Enable/Disable telegram on the produced configurations
 
 def random_float(negative = False):
     number = random.randrange(10, 50)
@@ -67,7 +68,7 @@ def build_test_config():
     # config['coinbasepro']['config']['simstartdate'] = start_date
     # config['coinbasepro']['config']['simenddate'] = end_date
     config['coinbasepro']['config']['live'] = 0
-    config['coinbasepro']['config']['disabletelegram'] = telegram
+    config['coinbasepro']['config']['disabletelegram'] = testing_telegram
     write_to_config(config, f"{test_config_directory}test_config_{market}_{id}.json")
     return config
 
@@ -132,7 +133,7 @@ def run_config_test():
                 test_config['test_info']['date'] = start_date
                 test_config['test_info']['sell_count'] = sell_count
                 test_config['coinbasepro']['config']['live'] = 1
-                test_config['coinbasepro']['config']['disabletelegram'] = 0
+                test_config['coinbasepro']['config']['disabletelegram'] = live_telegram
                 test_config.pop('sim', None)
                 test_config.pop('simstartdate', None)
                 test_config.pop('simenddate', None)
